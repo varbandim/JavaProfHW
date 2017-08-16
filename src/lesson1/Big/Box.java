@@ -22,12 +22,14 @@ import java.util.ArrayList;
         Ну и не забываем про метод добавления фрукта в коробку;
         В коробке, в листе с фруктами должны храниться именно отдельные экземпляры объектов фруктов
         */
-public class Box<Fruit> {
+public class Box<T extends Fruit> {
 
     private float weightFruit;
     private int numFruit;
+    private T fruit;
 
-    public Box(float weightFruit, int numFruit) {
+    public Box (T fruit, float weightFruit, int numFruit) {
+        this.fruit = fruit;
         this.weightFruit = weightFruit;
         this.numFruit = numFruit;
     }

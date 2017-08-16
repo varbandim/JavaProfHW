@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06a8007f-0acc-40ce-a692-1dae7e25d195" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lesson1/Big/Apple.java" afterPath="$PROJECT_DIR$/src/lesson1/Big/Apple.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lesson1/Big/Box.java" afterPath="$PROJECT_DIR$/src/lesson1/Big/Box.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lesson1/Big/Fruit.java" afterPath="$PROJECT_DIR$/src/lesson1/Big/Fruit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lesson1/Big/Orange.java" afterPath="$PROJECT_DIR$/src/lesson1/Big/Orange.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,11 +28,11 @@
       <file leaf-file-name="Box.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/lesson1/Big/Box.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="29" column="49" lean-forward="false" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
+            <state relative-caret-position="490">
+              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding>
-                <element signature="e#1662#1663#0" expanded="true" />
-                <element signature="e#1715#1716#0" expanded="true" />
+                <element signature="e#1731#1732#0" expanded="true" />
+                <element signature="e#1784#1785#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -416,7 +412,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="1" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -493,8 +489,8 @@
         <state relative-caret-position="506">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
-            <element signature="e#1662#1663#0" expanded="true" />
-            <element signature="e#1715#1716#0" expanded="true" />
+            <element signature="e#1731#1732#0" expanded="true" />
+            <element signature="e#1784#1785#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -533,11 +529,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lesson1/Big/Box.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="29" column="49" lean-forward="false" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
+        <state relative-caret-position="490">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
-            <element signature="e#1662#1663#0" expanded="true" />
-            <element signature="e#1715#1716#0" expanded="true" />
+            <element signature="e#1731#1732#0" expanded="true" />
+            <element signature="e#1784#1785#0" expanded="true" />
           </folding>
         </state>
       </provider>
