@@ -30,18 +30,19 @@ import java.util.ArrayList;
         8. В коробке, в листе с фруктами должны храниться именно отдельные экземпляры
         объектов фруктов  ++выполнено
         */
+//2
 public class Box<T extends Fruit> {
 
-    private ArrayList<T> list = new ArrayList<>();
+    private ArrayList<T> list = new ArrayList<>();//3
 
     public Box(ArrayList<T> list) {
         this.list = list;
     }
-
+    //7
     public void addFruitIntoBox(T t) {
-        list.add(t);
+        list.add(t);//8
     }
-
+    //4
     public float getWeightBox(){
         float numberOfFruitsInBox = 0;
         for (int i = 0; i < list.size(); i++) {
@@ -50,10 +51,18 @@ public class Box<T extends Fruit> {
         return list.size() * numberOfFruitsInBox;
     }
 
-
+    //5
     boolean compareTwoBoxes(Box box) {
         if (this.getWeightBox() == box.getWeightBox()) return true;
         else return false;
     }
 
+
+    public void exchangeBox(Box box){
+        if (list.getClass().equals(box.list.getClass())) {
+            for (int i = 0; i < box.list.size(); i++) {
+                list.add((T) box.list.get(i));
+            }
+        }else System.out.println("В коробку можно класть только одинаковые фрукты");
+    }
 }
