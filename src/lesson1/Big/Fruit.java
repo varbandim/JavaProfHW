@@ -1,5 +1,5 @@
 package lesson1.Big;
 
-public abstract class Fruit {
-
+public interface Fruit {
+    public float getWeight();
 }

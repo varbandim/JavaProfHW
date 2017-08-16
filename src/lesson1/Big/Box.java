@@ -24,22 +24,27 @@ import java.util.ArrayList;
         */
 public class Box<T extends Fruit> {
 
-    private float weightFruit;
-    private int numFruit;
-    private T fruit;
+    private ArrayList<T> list = new ArrayList<>();
 
-    public Box (T fruit, float weightFruit, int numFruit) {
-        this.fruit = fruit;
-        this.weightFruit = weightFruit;
-        this.numFruit = numFruit;
+    public Box(ArrayList<T> list) {
+        this.list = list;
     }
 
-    public float getWeight(){
-        return this.weightFruit*this.numFruit;
+    public void addFruitIntoBox(T t) {
+        list.add(t);
     }
 
-    boolean compare(Box box) {
-        if (this.getWeight() == box.getWeight()) return true;
+    public float getWeightBox(){
+        float numberOfFruitsInBox = 0;
+        for (int i = 0; i < list.size(); i++) {
+            numberOfFruitsInBox++;
+        }
+        return list.size() * numberOfFruitsInBox;
+    }
+
+
+    boolean compareTwoBoxes(Box box) {
+        if (this.getWeightBox() == box.getWeightBox()) return true;
         else return false;
     }
 
