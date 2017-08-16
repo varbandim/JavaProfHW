@@ -1,5 +1,7 @@
 package lesson1.Big;
 
+import java.util.ArrayList;
+
 /*
         Большая задача:
         Есть классы Fruit -> Apple, Orange; (больше фруктов не надо).
@@ -20,6 +22,23 @@ package lesson1.Big;
         Ну и не забываем про метод добавления фрукта в коробку;
         В коробке, в листе с фруктами должны храниться именно отдельные экземпляры объектов фруктов
         */
-public class Box <Fruit> {
-    
+public class Box<Fruit> {
+
+    private float weightFruit;
+    private int numFruit;
+
+    public Box(float weightFruit, int numFruit) {
+        this.weightFruit = weightFruit;
+        this.numFruit = numFruit;
+    }
+
+    public float getWeight(){
+        return this.weightFruit*this.numFruit;
+    }
+
+    boolean compare(Box box) {
+        if (this.getWeight() == box.getWeight()) return true;
+        else return false;
+    }
+
 }
