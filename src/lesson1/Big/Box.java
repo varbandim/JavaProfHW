@@ -53,16 +53,19 @@ public class Box<T extends Fruit> {
 
     //5
     boolean compareTwoBoxes(Box box) {
-        if (this.getWeightBox() == box.getWeightBox()) return true;
+        if (Math.abs(this.getWeightBox() - box.getWeightBox()) < 0.00001f) return true;
         else return false;
     }
 
 
-    public void exchangeBox(Box box){
-        if (list.getClass().equals(box.list.getClass())) {
-            for (int i = 0; i < box.list.size(); i++) {
-                list.add((T) box.list.get(i));
-            }
-        }else System.out.println("В коробку можно класть только одинаковые фрукты");
+    public void exchangeBox(Box<T> box){
+        for (int i = 0; i < box.list.size(); i++) {
+            list.add(box.list.get(i));
+        }
+//        if (list.getClass().equals(box.list.getClass())) {
+//            for (int i = 0; i < box.list.size(); i++) {
+//                list.add((T) box.list.get(i));
+//            }
+//        }else System.out.println("В коробку можно класть только одинаковые фрукты");
     }
 }
