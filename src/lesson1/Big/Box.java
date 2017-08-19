@@ -1,4 +1,4 @@
-package lesson1.Big;
+package Lesson1.Big;
 
 import java.util.ArrayList;
 
