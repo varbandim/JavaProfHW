@@ -1,10 +1,9 @@
 package Lesson2;
 
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.io.InputStreamReader;
+import java.sql.*;
 
 public class CreateTable extends DBWork{
 
@@ -33,4 +32,5 @@ public class CreateTable extends DBWork{
             e.printStackTrace();
         }
     }
+
 }

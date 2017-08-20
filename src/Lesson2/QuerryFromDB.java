@@ -22,28 +22,39 @@ public class QuerryFromDB extends DBWork {
             command = r.readLine();
             commands = command.split(" ");
             if (commands[0].equals(whatIsThePrise)) {
+                //получение цены по названию товара
                 try {
                     ResultSet result = stmt.executeQuery("SELECT * FROM Goods WHERE title = '" +
                             commands[1] + "'");
                     if (!result.next()) System.out.println("Такого товара нет");
-                    else System.out.println(result.getInt("id") +
-                            result.getInt("prodID") +
-                            result.getString("title") +
-                            result.getDouble("price"));
+                    else System.out.println(result.getInt("id") + " " +
+                            result.getInt("prodID") + " " +
+                            result.getString("title") + " " +
+                            result.getDouble("cost"));
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
+                //замена цены товара на другую
             } else if (commands[0].equals(toChangeThePrice)) {
                 try {
-                    ResultSet result = stmt.executeQuery("UPDATE Goods SET " + commands[2] +
-                            " WHERE cost = " + commands[3]);
+                    stmt.execute(
+                            "UPDATE Goods " +
+                                    "SET cost = " + commands[2] +
+                                    " WHERE title = '" + commands[1] + "'");
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
+                //вывод товаров в диапазоне цен
             } else if (commands[0].equals(goodsByPrice)) {
                 try {
                     ResultSet result = stmt.executeQuery("SELECT * FROM Goods WHERE (cost > " +
-                            commands[2] + " OR " + " cost < " + commands[3]);
+                            commands[1] + " AND cost < " + commands[2] + ")");
+                    while(result.next()) {
+                        System.out.println(result.getInt("id") + " " +
+                                result.getInt("prodID") + " " +
+                                result.getString("title") + " " +
+                                result.getDouble("cost"));
+                    }
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }

@@ -9,9 +9,9 @@ public class CompleteTheTable extends DBWork{
     public static void enterTable(){
         try {
             stmt.execute("DELETE FROM Goods");
-            for (int i = 1; i < 10001; i++) {
+            for (int i = 1; i < 101; i++) {
                 stmt.execute("INSERT INTO Goods (prodId, title, cost) " +
-                        "VALUES(" + i + ", 'товар"+ i +" '," + i*10 + ")");
+                        "VALUES(" + i + ", 'товар"+ i +"'," + i*10 + ")");
             }
         } catch (SQLException e) {
             e.printStackTrace();
