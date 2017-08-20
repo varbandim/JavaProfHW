@@ -2,7 +2,7 @@ package Lesson1;
 
 import java.util.ArrayList;
 
-public class Main {
+class Main {
     /*
       Написать метод, который меняет два элемента массива местами.
       (массив может быть любого ссылочного типа) (дженерик метод, не класс);
