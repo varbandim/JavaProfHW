@@ -14,6 +14,7 @@ public class DBWork {
         try {
             Class.forName("org.sqlite.JDBC");
             connection = DriverManager.getConnection("jdbc:sqlite:src/Lesson2/DB/mainDB.db");
+            stmt = connection.createStatement();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
