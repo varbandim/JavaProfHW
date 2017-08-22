@@ -5,13 +5,13 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class CompleteTheTable extends DBWork{
+    private final static String insCommand =  "INSERT INTO Goods (prodId, title, cost) VALUES(";
 
     public static void enterTable(){
         try {
             stmt.execute("DELETE FROM Goods");
-            for (int i = 1; i < 101; i++) {
-                stmt.execute("INSERT INTO Goods (prodId, title, cost) " +
-                        "VALUES(" + i + ", 'товар"+ i +"'," + i*10 + ")");
+            for (int i = 0; i < 100; i++) {
+                stmt.execute( insCommand + i + ", 'товар"+ i +"'," + i*10 + ")");
             }
         } catch (SQLException e) {
             e.printStackTrace();
