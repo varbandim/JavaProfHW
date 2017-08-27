@@ -5,8 +5,10 @@ import java.io.*;
 /**
  * Написать совсем небольшой метод, в котором 3 потока построчно пишут данные в файл (штук
  * по​​ 10​​ записей,​​ с​​ периодом​​ в​​ 20​​ мс)
+ *
+ * including ThreadForWriteFile.java
  */
-public class writeLog {
+public class WriteLog {
     public final static String pathFile = "D:\\!YandexDisk\\geekbrains.ru\\Java. Prof\\HomeWorks\\src\\Lesson4\\log.txt";
     public static void main(String[] args) throws IOException {
         BufferedWriter w = new BufferedWriter(new FileWriter(pathFile));

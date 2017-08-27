@@ -3,6 +3,8 @@ package Lesson4;
 /**
  * Создать три потока, каждый из которых выводит определенную букву (A, B и C) 5 раз, порядок
  * должен​​ быть​​ именно​​ ABСABСABС.​​ Используйте​​ wait/notify/notifyAll.
+ *
+ * including PrintChar.java
  */
 public class ThreeThreads {
     public static void main(String[] args) throws InterruptedException {
