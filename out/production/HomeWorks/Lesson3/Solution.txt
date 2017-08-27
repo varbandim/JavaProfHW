@@ -7,6 +7,7 @@
 ArrayList<InputStream> al = new ArrayList<>();
 ...
 Enumeration<InputStream> e = Collections.enumeration(al);
+++ выполнено
 
 3. Написать консольное приложение, которое умеет постранично читать текстовые файлы
 (размером > 10 mb), вводим страницу, программа выводит ее в консоль
