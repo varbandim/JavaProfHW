@@ -1,3 +1,10 @@
-Thread[Thread-0,5,main]
-Thread[Thread-1,5,main]
-Thread[Thread-2,5,main]
+1 строка: Thread-0
+2 строка: Thread-0
+3 строка: Thread-0
+4 строка: Thread-0
+5 строка: Thread-0
+6 строка: Thread-0
+7 строка: Thread-0
+8 строка: Thread-0
+9 строка: Thread-0
+10 строка: Thread-0

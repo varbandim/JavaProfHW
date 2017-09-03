@@ -1,34 +1,41 @@
 package Lesson4;
-
 import java.io.*;
-
 /**
  * Написать совсем небольшой метод, в котором 3 потока построчно пишут данные в файл (штук
  * по​​ 10​​ записей,​​ с​​ периодом​​ в​​ 20​​ мс)
- *
- * including ThreadForWriteFile.java
  */
 public class WriteLog {
     public final static String pathFile = "D:\\!YandexDisk\\geekbrains.ru\\Java. Prof\\HomeWorks\\src\\Lesson4\\log.txt";
+    public static BufferedWriter writer;
     public static void main(String[] args) throws IOException {
-        BufferedWriter w = new BufferedWriter(new FileWriter(pathFile));
-        ThreadForWriteFile threadForWriteFile = new ThreadForWriteFile();
+        writer = new BufferedWriter(new FileWriter(pathFile));
+        new Thread(new writToFile(writer)).start();
+        new Thread(new writToFile(writer)).start();
+        new Thread(new writToFile(writer)).start();
+    }
+    public static class writToFile implements  Runnable {
+        private BufferedWriter writer;
+        public writToFile(BufferedWriter writer) {
+            this.writer = writer;
+        }
 
-        Thread t1 = new Thread(() ->{
-            threadForWriteFile.getName();
-        });
-        Thread t2 = new Thread(() ->{
-            threadForWriteFile.getName();
-        });
-        Thread t3 = new Thread(() ->{
-            threadForWriteFile.getName();
-        });
-
-        w.write(String.valueOf(t1));
-        w.write("\n");
-        w.write(String.valueOf(t2));
-        w.write("\n");
-        w.write(String.valueOf(t3));
-        w.close();
+        @Override
+        public void run() {
+            for (int i = 1; i < 11; i++) {
+                try {
+                    writer.write(i + " строка: " + Thread.currentThread().getName() + "\n");
+                    Thread.sleep(20);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            try {
+                writer.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
