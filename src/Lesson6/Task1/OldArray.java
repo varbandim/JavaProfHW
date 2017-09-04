@@ -1,13 +1,5 @@
-package Lesson6;
+package Lesson6.Task1;
 
-import org.junit.Test;
-
-/*
-Написать набор тестов для этого метода (варианта 3-4 входных данных)
-вх: [ 1 2 4 4 2 3 4 1 7 ] -> вых: [ 1 7 ]
-
-
- */
 public class OldArray {
     public void floo () {
         int[] oldArr = {1, 2, 2, 5, 4, 3, 5, 1, 7};

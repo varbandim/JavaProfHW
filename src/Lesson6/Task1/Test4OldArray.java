@@ -1,12 +1,9 @@
-package Lesson6;
+package Lesson6.Task1;
 
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
-/**
- * Created by Admin on 04.09.2017.
- */
 public class Test4OldArray {
     private OldArray oldArray;
     @Test
