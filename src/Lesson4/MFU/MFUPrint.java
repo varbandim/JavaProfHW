@@ -1,7 +1,8 @@
 package Lesson4.MFU;
 
 /**
- * Created by Admin on 05.09.2017.
+ * синхронизировать внутри вспомогательных классов, потому что
+ * надо блочить выполнение каждого.
  */
 public class MFUPrint implements Runnable{
     private int numberPage;
@@ -12,11 +13,6 @@ public class MFUPrint implements Runnable{
 
     @Override
     public void run() {
-        System.out.println("Отпечатано " + numberPage + " раз");
-        try {
-            Thread.sleep(20);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
     }
 }

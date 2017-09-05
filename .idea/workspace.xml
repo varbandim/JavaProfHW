@@ -2,43 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06a8007f-0acc-40ce-a692-1dae7e25d195" name="Default" comment="Урок 6, 1 задача">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Lesson4/MFU/MFUPrint.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Lesson4/MFU/MFUScan.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HomeWorks/Lesson1/Big/Apple.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HomeWorks/Lesson1/Big/Box.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HomeWorks/Lesson1/Big/Fruit.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HomeWorks/Lesson1/Big/Orange.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HomeWorks/Lesson1/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HomeWorks/Lesson2/CompleteTheTable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HomeWorks/Lesson2/CreateTable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HomeWorks/Lesson2/DBWork.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HomeWorks/Lesson2/QuerryFromDB.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HomeWorks/Lesson2/desktop.ini" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HomeWorks/Lesson3/OutByteArr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HomeWorks/Lesson3/Sequense5Files.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HomeWorks/Lesson3/desktop.ini" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HomeWorks/Lesson3/readFile.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HomeWorks/Lesson4/MFU.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HomeWorks/Lesson4/MethodsForMFU.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HomeWorks/Lesson4/PrintChar.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HomeWorks/Lesson4/ThreeThreads.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HomeWorks/Lesson4/WriteLog$writToFile.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HomeWorks/Lesson4/desktop.ini" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HomeWorks/Lesson4/writeLog.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HomeWorks/Lesson5/Car.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HomeWorks/Lesson5/MainClass.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HomeWorks/Lesson5/Race.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HomeWorks/Lesson5/Road.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HomeWorks/Lesson5/Stage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HomeWorks/Lesson5/Tunnel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Lesson4/MethodsForMFU.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop.ini" afterPath="$PROJECT_DIR$/desktop.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lesson2/desktop.ini" afterPath="$PROJECT_DIR$/src/Lesson2/desktop.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lesson3/desktop.ini" afterPath="$PROJECT_DIR$/src/Lesson3/desktop.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lesson4/desktop.ini" afterPath="$PROJECT_DIR$/src/Lesson4/desktop.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lesson6/Task3/TestDB.java" afterPath="$PROJECT_DIR$/src/Lesson6/Task3/TestDB.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Lesson4/MFU.java" afterPath="$PROJECT_DIR$/src/Lesson4/MFU/MFU.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lesson4/MFU/MFU.java" afterPath="$PROJECT_DIR$/src/Lesson4/MFU/MFU.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lesson4/MFU/MFUPrint.java" afterPath="$PROJECT_DIR$/src/Lesson4/MFU/MFUPrint.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,8 +26,8 @@
       <file leaf-file-name="MFU.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Lesson4/MFU/MFU.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="15" column="30" lean-forward="false" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+            <state relative-caret-position="540">
+              <caret line="38" column="30" lean-forward="false" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -70,12 +36,9 @@
       <file leaf-file-name="MFUPrint.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Lesson4/MFU/MFUPrint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="14" column="61" lean-forward="false" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
-              <folding>
-                <element signature="e#173#174#0" expanded="true" />
-                <element signature="e#217#218#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="286">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -165,9 +128,9 @@
         <option value="$PROJECT_DIR$/src/Lesson6/Task2/TestWait4And1.java" />
         <option value="$PROJECT_DIR$/src/Lesson6/Task3/TestDB.java" />
         <option value="$PROJECT_DIR$/src/Lesson4/MFU.java" />
-        <option value="$PROJECT_DIR$/src/Lesson4/MFU/MFU.java" />
-        <option value="$PROJECT_DIR$/src/Lesson4/MFU/MFUPrint.java" />
         <option value="$PROJECT_DIR$/src/Lesson4/MFU/MFUScan.java" />
+        <option value="$PROJECT_DIR$/src/Lesson4/MFU/MFUPrint.java" />
+        <option value="$PROJECT_DIR$/src/Lesson4/MFU/MFU.java" />
       </list>
     </option>
   </component>
@@ -706,7 +669,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="886" extended-state="7" />
+    <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1063,6 +1026,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1093,19 +1059,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Lesson4/MFU/MFUPrint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="14" column="61" lean-forward="false" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
-          <folding>
-            <element signature="e#173#174#0" expanded="true" />
-            <element signature="e#217#218#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="286">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Lesson4/MFU/MFU.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="15" column="30" lean-forward="false" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        <state relative-caret-position="540">
+          <caret line="38" column="30" lean-forward="false" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
           <folding />
         </state>
       </provider>

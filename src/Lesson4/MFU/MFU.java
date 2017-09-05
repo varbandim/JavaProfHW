@@ -19,12 +19,28 @@ public class MFU {
                 new Thread(new MFUScan(i)).start();
             }
         }
-//        synchronized (lock2) {
-//            for (int i = 0; i < 1000; i++) {
-//
-//            }
-//        }
+
     }
 
+    void mfuPrint(int i) {
+        synchronized (lock1)
+        System.out.println("Отпечатано " + i + " раз");
+        try {
+            Thread.sleep(50);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    void mfuScan(int i){
+        synchronized (lock2) {
+            System.out.println("Отсканировано " + i + "раз");
+            try {
+                Thread.sleep(50);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
 }
