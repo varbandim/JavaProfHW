@@ -17,9 +17,9 @@ public class MFU {
 
         Device mfu = new Device();
         for (int i = 0; i < 10; i++) {
-            int finalI = i;
-            new Thread(() -> mfu.mfuPrint(finalI)).start();
-            new Thread(() -> mfu.mfuScan(finalI)).start();
+            int f = i;
+            new Thread(() -> mfu.mfuPrint(f, 10)).start();
+            new Thread(() -> mfu.mfuScan(f, 10)).start();
 
         }
 
@@ -30,25 +30,37 @@ public class MFU {
     static Object lock1 = new Object();
     static Object lock2 = new Object();
 
-    void mfuPrint(int i) {
+    void mfuPrint(int i, int n) {
         synchronized (lock1) {
-            System.out.println("Отпечатано " + i + " раз");
-            try {
-                Thread.sleep(50);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+            System.out.println();
+            System.out.println("Печать в потоке" + i);
+            System.out.println("*****************************");
+            for (int j = 0; j < n; j++) {
+                System.out.println("Отпечатано " + j +" страницы в " + i + " потоке");
+                try {
+                    Thread.sleep(50);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
+            System.out.println("*****************************");
         }
     }
 
-    void mfuScan(int i) {
+    void mfuScan(int i, int n) {
         synchronized (lock2) {
-            System.out.println("Отсканировано " + i + " раз");
-            try {
-                Thread.sleep(50);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+            System.out.println();
+            System.out.println("Сканирование в потоке " + i);
+            System.out.println("*****************************");
+            for (int j = 0; j < n; j++) {
+                System.out.println("Отсканировано " + j + " страниц в " + i + " потоке");
+                try {
+                    Thread.sleep(50);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
+            System.out.println("*****************************");
         }
     }
 }
