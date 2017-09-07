@@ -8,19 +8,19 @@ import java.util.TreeMap;
 
 public class Main {
     public static void start(Class<?> className) {
-        final int MIN_PRIORITY = 1;
-        final int MAX_PRIORITY = 10;
+        final int MAX_PRIORITY = 1;
+        final int MIN_PRIORITY = 10;
         Map<Integer, Method> map = new TreeMap<>();
         int countBefore = 0;
         int countAfter = 0;
 
         for(Method method: className.getDeclaredMethods()){
             if (method.getAnnotation(BeforeSuite.class) != null){
-                map.put(MIN_PRIORITY -1, method);
+                map.put(MAX_PRIORITY - 1, method);
                 countBefore++;
             }
             if (method.getAnnotation(AfterSuite.class) != null){
-                map.put(MAX_PRIORITY + 1, method);
+                map.put(MIN_PRIORITY + 1, method);
                 countAfter++;
             }
             if (method.getAnnotation(Test.class) != null){
