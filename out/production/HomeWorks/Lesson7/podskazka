@@ -1,0 +1,190 @@
+JavaВыделить код
+
+@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.RUNTIME)
+public @interface AfterSuite {
+}
+JavaВыделить код
+
+@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.RUNTIME)
+public @interface BeforeSuite {
+
+}
+JavaВыделить код
+@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.RUNTIME)
+public @interface Test {
+    int priority();  // no default value
+}
+Файл Тест класса
+JavaВыделить код
+public class TestCase {
+    @BeforeSuite
+    public void methodBefore() {
+        System.out.println("TestCase.methodBefore");
+    }
+    @AfterSuite
+    public void methodAfter() {
+        System.out.println("TestCase.methodAfter");
+    }
+
+    @Test(priority = 1)
+    public void methodTest1() {
+        System.out.println("TestCase.methodTest1 priority 1 (highest)");
+    }
+
+    @Test(priority = 5)
+    public void methodTest2() {
+        System.out.println("TestCase.methodTest2 priority 5 (lowest)");
+    }
+
+    @Test(priority = 2)
+    public void methodTest3() {
+        System.out.println("TestCase.methodTest3 priority 2(middle)");
+    }
+
+
+    public void commonMethod1() {
+        System.out.println("TestCase.commonMethod1");
+    }
+    public void commonMethod2() {
+        System.out.println("TestCase.commonMethod2");
+    }
+
+}
+
+И файл с методом start()
+public class Main {
+    public static void start(Class<?> className) {
+        final int MIN_PRIORITY = 1;
+        final int MAX_PRIORITY = 10;
+        Map<Integer, Method> map = new TreeMap<>();
+
+        for (Method method : className.getDeclaredMethods()) {
+            if (method.getAnnotation(BeforeSuite.class) != null) {
+                map.put(MIN_PRIORITY - 1, method);
+            }
+            if (method.getAnnotation(AfterSuite.class) != null) {
+                map.put(MAX_PRIORITY + 1, method);
+            }
+            if (method.getAnnotation(Test.class) != null) {
+                Test test = method.getAnnotation(Test.class);
+                map.put(test.priority(), method); // сортировка автоматом
+            }
+        }
+
+        System.out.println("Map:");
+        for (Integer key : map.keySet()) {
+            System.out.println("priority:" + key + " " + map.get(key).getName());
+        }
+
+        try {
+            TestCase testCase = new TestCase(); // объект для Reflections
+            for (Integer key : map.keySet()) {
+                map.get(key).invoke(testCase);
+            }
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Annotations analyze:");
+        start(TestCase.class);
+    }
+}
+
+Цитата Сообщение от KEKCoGEN  Посмотреть сообщение
+а что будете делать если передадут класс TestCase2 ? Код переписывать?
+"шеф... все пропало...."
+Вот оно, исправил, спасибо что подсказали.
+Да не сделаны исключения, ну думаю автор сам разберется.
+
+public class TestCase2 {
+    @BeforeSuite
+    public void methodBefore() {
+        System.out.println("TestCase2.methodBefore");
+    }
+    @AfterSuite
+    public void methodAfter() {
+        System.out.println("TestCase2.methodAfter");
+    }
+
+    @Test(priority = 3)
+    public void methodTest1() {
+        System.out.println("TestCase2.methodTest1 priority 3 (lowest)");
+    }
+
+    @Test(priority = 1)
+    public void methodTest2() {
+        System.out.println("TestCase2.methodTest2 priority 1 (highest)");
+    }
+
+    @Test(priority = 2)
+    public void methodTest3() {
+        System.out.println("TestCase2.methodTest3 priority 2(middle)");
+    }
+
+
+    public void commonMethod1() {
+        System.out.println("TestCase2.commonMethod1");
+    }
+    public void commonMethod2() {
+        System.out.println("TestCase2.commonMethod2");
+    }
+
+}
+
+public class Main {
+    public static void start(Class<?> className) {
+        final int MIN_PRIORITY = 1;
+        final int MAX_PRIORITY = 10;
+        Map<Integer, Method> map = new TreeMap<>();
+
+        for (Method method : className.getDeclaredMethods()) {
+            if (method.getAnnotation(BeforeSuite.class) != null) {
+                map.put(MIN_PRIORITY - 1, method);
+            }
+            if (method.getAnnotation(AfterSuite.class) != null) {
+                map.put(MAX_PRIORITY + 1, method);
+            }
+            if (method.getAnnotation(Test.class) != null) {
+                Test test = method.getAnnotation(Test.class);
+                map.put(test.priority(), method); // сортировка автоматом
+            }
+        }
+
+        System.out.println("\nMap for "+className.getSimpleName()+":");
+        for (Integer key : map.keySet()) {
+            System.out.println("priority:" + key + " " + map.get(key).getName());
+        }
+        System.out.println("\nReflections for "+className.getSimpleName()+":");
+
+        try {
+            Object testCase = className.newInstance();
+            for (Integer key : map.keySet()) {
+                map.get(key).invoke(testCase);
+            }
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Annotations analyze:");
+        start(TestCase.class);
+        start(TestCase2.class);
+    }
+}
+1
