@@ -15,10 +15,11 @@ public class DBWork {
     //чтение
     private static final String readSql = "SELECT * FROM Students";
     //обновление
-    private static final String updateSql = "UPDATE INTO Students SET mark = 15 WHERE name = 'Mark'";
+    private static final String updateSql = "UPDATE Students SET mark = 15 WHERE name = 'Mark'";
     //добавление
     private static final String addSql = "INSERT INTO Students (name, mark) VALUES ('vasya', 18)";
-
+    //получение счетчика данных
+    private static final String count = "SELECT COUNT(*) AS CNT FROM Students";
 
     //проинициализировать базу и создать точку возврата
     @BeforeClass
@@ -33,22 +34,33 @@ public class DBWork {
     }
 
     @Test
-    public void testBase() throws SQLException {
+    public void testBaseInsert() throws SQLException {
         //корректно добавляются
-        result = stmt.executeQuery(addSql);
+        result = stmt.executeQuery(count);
+        int startCount = result.getInt("CNT");
+        stmt.executeUpdate(addSql);
+        result = stmt.executeQuery(count);
         if (!result.next()) {
-            Assert.fail("Данные не добавляются");
+            if (startCount + 1 != result.getInt("CNT")) {
+                Assert.fail("Данные не добавляются");
+            }
         }
+    }
 
+    @Test
+    public void testBaseUpdate() throws SQLException {
         // обновляются
-        result = stmt.executeQuery(updateSql);
-        if (!result.next()) {
+        int countUpdate = stmt.executeUpdate(updateSql);
+        if (countUpdate == 0) {
             Assert.fail("Данные не обновляются");
         }
+    }
 
+    @Test
+    public void testBaseRead() throws SQLException{
         //читаются записи
         result = stmt.executeQuery(readSql);
-        if (!result.next()) {
+        if (result.next()) {
             Assert.fail("Данные не читаются");
         }
     }
